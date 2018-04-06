@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
+describe Post, type: :model do
   before(:each) do
     @user = FactoryBot.create(:user)
   end
