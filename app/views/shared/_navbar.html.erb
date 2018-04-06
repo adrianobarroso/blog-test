@@ -1,0 +1,20 @@
+<div class="navbar-blog">
+  <div class="logo">
+    <%= link_to root_path do %>
+      <span>blog</span>
+    <% end %>
+  </div>
+
+  <% if signed_in? %>
+    <%= link_to "Create a post", new_post_path, class: 'btn btn-success' %>
+  <% end %>
+
+  <div class="user-actions drop-down">
+    <% if signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, class: 'btn btn-danger', method: :delete %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-success' %>
+      <%= link_to "Log in", new_user_session_path, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
