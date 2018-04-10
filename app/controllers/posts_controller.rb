@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
+
   before_action :set_post, only: [:edit, :update]
+  after_action :md_to_html, only: [:create, :update]
 
   def index
     @posts = Post.order(created_at: :desc)
@@ -43,5 +45,9 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def md_to_html
+    ConvertMarkdownJob.perform_now(@post.id)
   end
 end

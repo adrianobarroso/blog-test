@@ -14,7 +14,7 @@ context 'PostsController' do
 
     it "should not see button 'create a post' when enter index and its not logged in" do
       visit '/posts'
-      expect(page).to_not have_content 'Create a post'
+      expect(page).to_not have_content 'Write a post'
     end
 
     it "should not be able to enter `posts/new` page when its not logged in" do
@@ -30,7 +30,7 @@ context 'PostsController' do
 
     it "should see button 'create a post' when enter index and its logged in" do
       visit '/posts'
-      expect(page).to have_content 'Create a post'
+      expect(page).to have_content 'Write a post'
     end
   end
 end

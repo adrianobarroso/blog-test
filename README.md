@@ -1,24 +1,27 @@
-# README
+# SmartFit Test - Adriano W Barroso
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Stack
 
-Things you may want to cover:
+* ruby 2.3.4
+* rails 5.1.6
+* postgresql
+* redis
+* sidekiq
 
-* Ruby version
+## Running the app
 
-* System dependencies
+Make sure you have redis-serve installed.
 
-* Configuration
+1. Clone the app `git clone https://github.com/adrianorob/blog-test.git`
+2. `bundle install`
+3. `rails db:create db:migrate`
+4. Open another terminal and run `redis-server`
+4. First terminal run `rails s`
 
-* Database creation
+## Running Tests
 
-* Database initialization
+```
+rspec
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Thanks in advance

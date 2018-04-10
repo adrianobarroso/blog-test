@@ -20,6 +20,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'simple_form'
 gem 'redcarpet'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 
 group :test do
   gem 'capybara'

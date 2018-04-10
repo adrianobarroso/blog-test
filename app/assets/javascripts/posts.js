@@ -2,17 +2,11 @@ var form = document.querySelector("#post_content_md");
 if (form) {
   simplemde = new SimpleMDE({
     autofocus: true,
-  	autosave: {
-  		enabled: true,
-  		uniqueId: "post_content_md",
-  		delay: 1000,
-  	},
   	blockStyles: {
   		bold: "__",
   		italic: "_"
   	},
     element: document.getElementById("post_content_md"),
-  	forceSync: true,
   	hideIcons: ["guide", "heading"],
   	indentWithTabs: true,
   	insertTexts: {
