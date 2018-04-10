@@ -5,8 +5,11 @@
     <% end %>
   </div>
 
-  <% if signed_in? %>
-    <%= link_to "Create a post", new_post_path, class: 'btn btn-success' %>
+  <% if signed_in? && controller_name == "posts" && !['new', 'edit'].include?(action_name) %>
+    <%= link_to new_post_path, class: 'btn btn-success' do %>
+      Create a post
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+    <% end %>
   <% end %>
 
   <div class="user-actions drop-down">
@@ -14,7 +17,10 @@
       <%= link_to "Log out", destroy_user_session_path, class: 'btn btn-danger', method: :delete %>
     <% else %>
       <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-success' %>
-      <%= link_to "Log in", new_user_session_path, class: 'btn btn-primary' %>
+      <%= link_to new_user_session_path, class: 'btn btn-primary' do %>
+        Log in
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+      <% end %>
     <% end %>
   </div>
 </div>

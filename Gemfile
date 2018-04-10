@@ -16,8 +16,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 4.7'
-gem 'devise'
 gem 'coffee-rails', '~> 4.2'
+gem 'devise'
+gem 'simple_form'
 
 group :test do
   gem 'capybara'
