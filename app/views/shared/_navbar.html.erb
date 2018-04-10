@@ -7,7 +7,7 @@
 
   <% if signed_in? && controller_name == "posts" && !['new', 'edit'].include?(action_name) %>
     <%= link_to new_post_path, class: 'btn btn-success' do %>
-      Create a post
+      Write a post
       <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
     <% end %>
   <% end %>
