@@ -3,6 +3,6 @@ class ConvertMarkdownJob < ApplicationJob
 
   def perform(id)
     post = Post.find(id)
-    post.update(content_html: @post.md_to_html)
+    post.update(content_html: post.md_to_html)
   end
 end
