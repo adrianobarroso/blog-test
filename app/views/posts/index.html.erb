@@ -7,19 +7,14 @@
   <br>
   <div class="row">
     <% @posts.each do |post| %>
-      <% next if post.content_html.nil? %>
       <div class="col-xs-12 col-sm-6">
-        <div class="card">
-          <div class="card-header">
-            <%= post.title %>
-          </div>
-          <div class="card-content">
-            <%= post.content_html.html_safe %>
-          </div>
-          <% if post.user == current_user %>
-            <%= link_to 'edit', edit_post_path(post), class: 'btn btn-success edit-post' %>
+        <% if post.content_html.nil? && post.user == current_user %>
+          <%= render 'card', post: post %>
+        <% else %>
+          <%= link_to post_path(post), class: 'cardpost-link' do %>
+            <%= render 'card', post: post %>
           <% end %>
-        </div>
+        <% end %>
       </div>
     <% end %>
   </div>

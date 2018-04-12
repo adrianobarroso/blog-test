@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
-  before_action :set_post, only: [:edit, :update]
+  before_action :set_post, only: [:edit, :update, :show]
   after_action :md_to_html, only: [:create, :update]
 
   def index
     @posts = Post.order(created_at: :desc)
+  end
+
+  def show
   end
 
   def new

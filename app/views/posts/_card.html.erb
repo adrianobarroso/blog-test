@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <span class="type-content">
+      <%= post.content_html.nil? ? "markdown" : "HTML" %>      
+    </span>
+    <%= post.title %>
+  </div>
+  <div class="card-content">
+    <%= post.content_html.nil? ? post.content_md : post.content_html.html_safe  %>
+  </div>
+  <% if post.user == current_user %>
+    <%= link_to 'edit', edit_post_path(post), class: 'btn btn-success edit-post' %>
+  <% end %>
+</div>

@@ -7,6 +7,15 @@
   position: relative;
 }
 
+a.cardpost-link {
+  text-decoration: none;
+  color:inherit;
+}
+
+a.cardpost-link:hover {
+  color:inherit;
+}
+
 .card-header {
   min-height: 40px;
   width: 100%;
@@ -14,6 +23,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.type-content {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 3px 6px;
+  background-color: white;
+  border-radius: 4px;
 }
 
 .card-content {
