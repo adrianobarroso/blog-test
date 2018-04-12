@@ -48,6 +48,6 @@ class PostsController < ApplicationController
   end
 
   def md_to_html
-    ConvertMarkdownJob.perform_now(@post.id)
+    ConvertMarkdownJob.perform_now(@post.id) if @post.id
   end
 end

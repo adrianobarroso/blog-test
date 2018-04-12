@@ -10,7 +10,7 @@
 
 ## Running the app
 
-Make sure you have redis-serve installed.
+Make sure you have `redis-server` installed.
 
 1. Clone the app `git clone https://github.com/adrianorob/blog-test.git`
 2. `bundle install`
